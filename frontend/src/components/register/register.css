@@ -1,0 +1,296 @@
+/* register.css */
+
+/* General styling for the registration container */
+.register {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.register h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+    outline: none;
+}
+
+small {
+    color: #d9534f;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+h3 {
+    margin: 10px 0 5px;
+    color: #444;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+select {
+    padding: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.03);
+}
+
+.button:active {
+    background-color: #003f7f;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+input[type="text"][name$="Other"],
+input[type="text"][name="learningReasonOther"],
+input[type="text"][name="objectiveOther"],
+input[type="text"][name="motivationOther"],
+input[type="text"][name="challengesOther"],
+input[type="text"][name="longTermGoalOther"],
+input[type="text"][name="barriersOther"] {
+    margin-top: 8px;
+}
+
+.register input[type="range"] {
+    width: calc(100% - 50px);
+}
+
+.register span {
+    font-size: 14px;
+    margin-left: 10px;
+    color: #555;
+}
+
+.toast-container {
+    z-index: 1000;
+}
+
+.toast-error {
+    background-color: #fdecea;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.toast-success {
+    background-color: #eafaf1;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+@media (max-width: 768px) {
+    .register {
+        padding: 20px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Additional styling for smooth and calm experience */
+input, select {
+    transition: background-color 0.3s, border 0.3s;
+}
+
+input:focus, select:focus {
+    background-color: #e6f7ff;
+    border: 1px solid #66afe9;
+}
+
+input::placeholder, select {
+    color: #999;
+}
+
+input:not(:focus) {
+    background-color: #fafafa;
+}
+
+.button {
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.button:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+small {
+    font-size: 11px;
+    color: #b30000;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background: #007bff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+/* Styling for the difficulty range container */
+.difficulty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.difficulty-slider-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15px; /* Space between the slider and the value */
+}
+
+.difficulty-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.difficulty-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #007bff;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.difficulty-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #007bff;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.difficulty-slider:hover::-webkit-slider-thumb {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+.difficulty-value {
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 30px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #777;
+}
+/* Container for the buttons and "or" */
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.or-text {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
